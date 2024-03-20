@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      #myDIV {
+        margin-left: 420px;
+        width: 400px;
+        padding: 50px ;
+        text-align: center;
+        background-color:lightblue;
+        margin-top: 20px;
+      }
+
+      body{
+        margin-top: 150px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 30px;
+      }
+
+      button{
+        width: 90px;
+        height: 40px;
+        color: white;
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the button to see the section!  
+    </p>
+
+    <button onclick="myFunction()">Button</button>
+
+    <div id="myDIV">Hey guys!! Hope you can see me! &#x1F603;</div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
