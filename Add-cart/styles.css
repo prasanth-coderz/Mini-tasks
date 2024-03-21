@@ -1,0 +1,13 @@
+/* CSS for the counter */
+.container {
+  text-align: center;
+}
+
+.counter-controls {
+  margin-bottom: 10px; /* Add some space between buttons and count label */
+}
+
+#countLabel {
+  display: block; /* Display label as a block element */
+  margin-bottom: 10px; /* Add space below the label */
+}

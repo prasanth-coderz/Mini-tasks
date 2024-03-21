@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="form-box">
+      <form id="myForm" onsubmit="return validateForm()">
+        <h3>Form</h3>
+
+        <!--Name section-->
+        <div class="name-sec">
+          <label for="name"></label>
+          <div class="input-area">
+            <input type="text" id="name" placeholder="Name" name="name" />
+            <i class="bx bx-user"></i>
+          </div>
+          <span id="nameError" class="error"></span>
+        </div>
+
+        <!--Email section-->
+        <div class="email-sec">
+          <label for="email"></label>
+          <div class="input-area">
+            <input type="text" id="email" placeholder="Mail id" name="email" />
+            <i class="bx bx-envelope"></i>
+          </div>
+          <span id="emailError" class="error"></span>
+        </div>
+
+        <!-- Phone section-->
+        <div class="phone-sec">
+          <label for="phone"></label>
+          <div class="input-area">
+            <input
+              type="text"
+              id="phone-no"
+              placeholder="Phone no"
+              name="phone"
+            />
+            <i class="bx bx-mobile-alt"></i>
+          </div>
+          <span id="phoneError" class="error"></span>
+        </div>
+
+        <!--Gender section-->
+        <div class="gender-sec">
+          <label for="gender">
+            <p>Gender:</p>
+            <label>
+              <input type="radio" name="gender" name="male" /> Male
+            </label>
+            <label>
+              <input type="radio" name="gender" name="Female" />Female
+            </label>
+          </label>
+        </div>
+
+        <!--submit button-->
+        <input type="submit" class="btn" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

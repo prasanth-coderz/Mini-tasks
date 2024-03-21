@@ -1,0 +1,74 @@
+.error {
+  color: red;
+}
+
+body {
+  font-family: "Verdana", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:url(#) no-repeat;
+  background-size: cover;
+  background-position:center;
+}
+.form-box {
+  width: 450px;
+  height: 460px;
+  background-color: lightcoral;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur (20px);
+  color: white;
+  padding: 30px 30px 0px 30px;
+}
+
+.form-box h3 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.input-area {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: relative;
+  padding-top: 20px;
+}
+
+.input-area input {
+  width: 94%;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  background: transparent;
+  outline: none;
+  color: white;
+  padding-left: 20px;
+}
+
+.input-area input::placeholder {
+  color: white;
+}
+
+.input-area i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  font-size: 20px;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 50px;
+}
+
+.gender-sec {
+  display: flex;
+  justify-content: space-between;
+}
