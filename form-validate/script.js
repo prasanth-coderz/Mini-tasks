@@ -2,7 +2,17 @@ function validateForm() {
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
   var phone = document.getElementById("phone-no").value;
+  var genderMale = document.getElementById("male").checked;
+  var genderFemale = document.getElementById("female").checked;
+  var programmingLanguagesCheckboxes = document.getElementById(
+    ".programming-language"
+  );
+  var socialmedia = document.getElementById("social").value;
+  var directcheck = document.getElementById("direct").value;
+  var friends = document.getElementById("friend").value;
+
   var isValid = true;
+  var atLeastOneLanguageSelected = false;
 
   // Empty field validation
   if (name === "") {
@@ -39,6 +49,31 @@ function validateForm() {
   if (!phoneRegex.test(phone) && phone !== "") {
     document.getElementById("phoneError").innerHTML = "Invalid phone number";
     isValid = false;
+  }
+
+  // radiobuttion validation
+  if (!genderMale && !genderFemale) {
+    document.getElementById("genderError").innerHTML = "Specify your gender";
+    isValid = false;
+  } else {
+    document.getElementById("genderError").innerHTML = "";
+  }
+
+  //dropdown validation
+
+  if (!socialmedia && !directcheck && !friends) {
+    document.getElementById("reference-error").innerHTML = "Select atleast one";
+    isValid = false;
+  } else {
+    document.getElementById("reference-error").innerHTML = "";
+  }
+
+  if (!atLeastOneLanguageSelected) {
+    document.getElementById("programmingLanguagesError").innerHTML =
+      "Select at least one programming language";
+    isValid = false;
+  } else {
+    document.getElementById("programmingLanguagesError").innerHTML = "";
   }
 
   return isValid;

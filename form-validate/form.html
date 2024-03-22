@@ -14,7 +14,7 @@
   <body>
     <div class="form-box">
       <form id="myForm" onsubmit="return validateForm()">
-        <h3>Form</h3>
+        <h3>Registration Form</h3>
 
         <!--Name section-->
         <div class="name-sec">
@@ -55,17 +55,42 @@
         <div class="gender-sec">
           <label for="gender">
             <p>Gender:</p>
+            <label> <input type="radio" id="male" name="gender" /> Male </label>
             <label>
-              <input type="radio" name="gender" name="male" /> Male
-            </label>
-            <label>
-              <input type="radio" name="gender" name="Female" />Female
+              <input type="radio" id="female" name="gender" /> Female
             </label>
           </label>
         </div>
+        <span id="genderError" class="error"></span>
+
+        <!-- Programming Languages section (Dropdown) -->
+        <div class="programming-languages-sec">
+          <label for="programming-languages">Programming Languages:</label>
+          <select id="programming-languages" name="programming-languages">
+            <option value="">Select language</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="csharp">C#</option>
+            <option value="cpp">C++</option>
+          </select>
+          <div class="error" id="programmingLanguagesError"></div>
+        </div>
+
+        <!-- Refernce as checkbtn-->
+        <div class="reference-sec">
+          <label for="Reference">How you know about us:</label>
+          <input type="checkbox" id="social" name="ref" />
+          <label>Social </label>
+          <input type="checkbox" id="friend" name="ref" />
+          <label>Friend</label>
+          <input type="checkbox" id="direct" name="ref" />
+          <label>Direct</label>
+        </div>
+        <div class="error" id="reference-error"></div>
 
         <!--submit button-->
-        <input type="submit" class="btn" value="Submit" />
+        <input type="submit" class="btn" value="Register" />
       </form>
     </div>
   </body>
